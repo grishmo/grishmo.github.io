@@ -284,8 +284,8 @@
             }
             /*The code below is mine.*/
             function writeHijriDateShort(adjustment) {
-                var iDate = kuwaiticalendar(adjustment);
-                return iDate[5] + "-" + (iDate[6] + 1) + "-" + iDate[7]
+                var hDate = kuwaiticalendar(adjustment);
+                return ("0" + hDate[5]).slice(-2) + "-" + ("0" + (hDate[6] + 1)).slice(-2) + "-" + hDate[7]
             }
             /*Month and sunset adjustment.*/
             var adjustment = -1;
