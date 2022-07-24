@@ -111,18 +111,47 @@
         <div id="contents">
             
 
+<h3>YouTube With-Out Distractions - YTWOD</h3>
 <p>
-    <a href="/" style="color: black; text-decoration: none;">&larr; <em>Home</em></a>
+	Copy and paste below the link of the video you want to watch without distractions and click on the "Watch" button.
 </p>
 
-<h2>Trains</h2>
-<p>
-    As promised, this notebook is dedicated to trains.
-    Trains can be fascinating, and when you know a little bit of design, then why not give them a try?
-    But obviously I cannot jump right into designing real trains, so rather I though of giving model trains a try.
-    I got this idea on seeing Lego trains, and their imitations of real trains.
-    There are certain real life trains that I find interesting, and here I will try to document my progress regarding the same.
-<p>
+<input type="search" name="q" id="src" autofocus>
+<button type="button" onclick="watch();" id="wbut">Watch</button>
+<br><br>
+<div id="video-div">
+
+</div>
+
+<script>
+	var src = document.getElementById("src");
+
+	src.addEventListener("keyup", function(event) {
+	
+	  if (event.keyCode === 13) {
+		event.preventDefault();
+		watch();
+	  }
+	});
+	function watch() {
+		var src = document.getElementById('src').value;
+		var src_c = 'https://www.youtube.com/embed/' + src.split('?v=')[1];
+		var vframe = `
+			<iframe src="${src_c}" title="YouTube video player" frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen="" id="vframe"></iframe>
+		`;
+		try {
+			document.getElementById('video-div').innerHTML = vframe;
+			return 0;
+		} catch(error) {
+			console.log('Error found: ');
+			console.error(error);
+			return 1;
+		}
+	}
+</script>
+
 
 
         </div>

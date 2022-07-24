@@ -51,27 +51,16 @@
                 padding: 10px;
                 margin: 0;
             }
-			#video-div {
-				text-align: center;
-			}
             @media only screen and (min-width: 960px) {
                 header {
                     padding: 1em 7em;
                 }
                 #contents {
-                    padding: 1px 7em 3em;
+                    padding: 1px 7em 7em;
                 }
-				#src {
-					width: 25em;
-					height: 2.3em;
-				}
-				#wbut {
-					height: 2.3em;
-				}
-				#vframe {
-					width: 100%;
-					max-width: 900px;
-					height: 500px;
+				#video {
+					width = "1000px";
+					height="600px";
 				}
             }
             @media only screen and (max-width: 960px) {
@@ -79,18 +68,8 @@
                     padding: 1em 7%;
                 }
                 #contents {
-                    padding: 1px 7% 2em;
+                    padding: 1px 7% 5em;
                 }
-				#src {
-					width: 15em;
-					height: 2em;
-				}
-				#wbut {
-					height: 2em;
-				}
-				#vframe {
-					width: 100%;
-				}
             }
         </style>
         <meta charset="UTF-8" />
@@ -206,7 +185,7 @@
             /*The code below is mine.*/
             function writeHijriDateShort(adjustment) {
                 var hDate = kuwaiticalendar(adjustment);
-                return ("0" + hDate[5]).slice(-2) + " / " + ("0" + (hDate[6] + 1)).slice(-2) + " / " + hDate[7]
+                return ("0" + hDate[5]).slice(-2) + "-" + ("0" + (hDate[6] + 1)).slice(-2) + "-" + hDate[7]
             }
             /*Month and sunset adjustment.*/
             var adjustment = -1;

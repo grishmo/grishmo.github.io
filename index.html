@@ -51,21 +51,46 @@
                 padding: 10px;
                 margin: 0;
             }
+			#video-div {
+				text-align: center;
+			}
             @media only screen and (min-width: 960px) {
                 header {
                     padding: 1em 7em;
                 }
                 #contents {
-                    padding: 1px 7em 7em;
+                    padding: 1px 7em 3em;
                 }
+				#src {
+					width: 25em;
+					height: 2.3em;
+				}
+				#wbut {
+					height: 2.3em;
+				}
+				#vframe {
+					width: 100%;
+					max-width: 900px;
+					height: 500px;
+				}
             }
             @media only screen and (max-width: 960px) {
                 header {
                     padding: 1em 7%;
                 }
                 #contents {
-                    padding: 1px 7% 5em;
+                    padding: 1px 7% 2em;
                 }
+				#src {
+					width: 15em;
+					height: 2em;
+				}
+				#wbut {
+					height: 2em;
+				}
+				#vframe {
+					width: 100%;
+				}
             }
         </style>
         <meta charset="UTF-8" />
@@ -86,9 +111,7 @@
         <div id="contents">
             
 
-<p>
-    <a href="/privacy" style="color: black; text-decoration: none;"><em>Privacy</em></a>
-</p>
+<h5> 15 / 03 / 1443 </h5>
 
 <h2>Grishmo - summer</h2>
 
@@ -98,13 +121,10 @@
     <br><br>
     I intend to make this my new Notes website, as time and again, I do see the need of creating one as such.
     The main reason to do this is not just to keep a record of things that I come across, but also to have a space to
-    share
-    these with others through a simple url.
-    Certainly, a pre-built website like Wordpress or Blogger would do the job fine.
-    But sometimes I like to be more in control, and have complete knowledge of my things.
-    This site is not just a collection of pages, but more. Nonetheless, that 'more' is only accessible to me, the admin
-    of
-    this website.
+    share these with others through a simple url.
+    This site is just a collection of pages, nothing more.
+	<br><br>
+	By the way, you can view YouTube videos without distractions <a href="ytwod" style="color: #6666ff;">here</a>.
 </p>
 
 <br>
@@ -115,23 +135,12 @@
 <ol>
     <li>
         Notebooks - sections of the website to save webpages corresponding to the subject.
-        Like 'hypernotes.net/india' and 'hypernotes.net/mech'.
+        Like 'grishmo.net/india' and 'grishmo.net/mech'.
     </li>
     <li>
-        Search - not much use, comes handy at times.
-        Mainly to implement it as a trial for other implementations.
-    </li>
-    <li>
-        Admin - a place to administer the site and create the notes.
+        Contents - a 'Contents' section to navigate through the notebooks.
     </li>
 </ol>
-<p>
-    Developing these features will take some time, as I am not free to do so right now.
-    Perhaps in the span of some months, maybe half a year later, we could see this being done.
-    And perhaps maybe even implemented on the server.
-    But whether on the internet or not, I wish to complete this and keep it running on my computer.
-    This could be, perhaps, one really well done and <em>completed</em> project.
-</p>
 
 <div class="media-div">
     <img src="/assets/img/pic2.jpg" class="media">
@@ -152,13 +161,13 @@
     I have been thinking of putting my engineering knowledge to application, and one good place I
     found is to try to design and 3-D print trains and run them on rails.
     After having searched a bit on the internet, I decided that the models would be upon the
-    Lego scale - the so-called L-Gauge.
+    O-Gauge at 30mm rail width.
     The designs ought to be made using Fusion 360 on my computer, and then 3-D printed out of plastic.
     As for the tracks, they may be bought in quite some numbers, although I probably would design and
     print some, just to check which is cheaper.
-    The wagons could come from a few Lego sets as well as designed and printed.
+    The wagons are to be designed and printed as well.
     <br>
-    <a href="/trains/intro.html" style="color: #4E8ECB;">Here</a> I've started the notebook.
+    <a href="/trains/intro.html" style="color: #6666ff;">Here</a> I've started the notebook.
 </p>
 
 <div class="media-div">
@@ -203,9 +212,16 @@
     <li>Although, I am not sure if this latter way would be of any use.</li>
 </ul>
 
+<h3>Some pages</h3>
+<ul>
+    <li><a href="/update" style="color: black; text-decoration: none;"><em>After a long time</em></a></li>
+    <li><a href="/mechanical" style="color: black; text-decoration: none;"><em>Subject</em></a></li>
+    <li><a href="/privacy" style="color: black; text-decoration: none;"><em>Privacy</em></a></li>
+</ul>
 
-        </div>
-        <script>
+
+</div>
+<script>
             /* The code below is from AlHabib's blog - https://www.al-habib.info/islamic-calendar/hijricalendartext.htm */
             function gmod(n, m) {
                 return ((n % m) + m) % m;
@@ -285,7 +301,7 @@
             /*The code below is mine.*/
             function writeHijriDateShort(adjustment) {
                 var hDate = kuwaiticalendar(adjustment);
-                return ("0" + hDate[5]).slice(-2) + "-" + ("0" + (hDate[6] + 1)).slice(-2) + "-" + hDate[7]
+                return ("0" + hDate[5]).slice(-2) + " / " + ("0" + (hDate[6] + 1)).slice(-2) + " / " + hDate[7]
             }
             /*Month and sunset adjustment.*/
             var adjustment = -1;
